@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------->8
+[2025-02-20T12:44:46.636495700Z] time="2025-02-20T21:44:46+09:00" level=info msg="DOCKER_HOST=npipe:////./pipe/docker_engine"
+[2025-02-20T12:44:46.637536700Z] time="2025-02-20T21:44:46+09:00" level=info msg="Starting server (socket=\\\\.\\pipe\\dockerDevEnvApiServer, storeDir=C:\\Users\\bbb01\\.docker\\devenvironments)"
+-------------------------------------------------------------------------------->8
+[2025-02-20T12:50:08.215674600Z] time="2025-02-20T21:50:08+09:00" level=info msg="DOCKER_HOST=npipe:////./pipe/docker_engine"
+[2025-02-20T12:50:08.215674600Z] time="2025-02-20T21:50:08+09:00" level=info msg="Starting server (socket=\\\\.\\pipe\\dockerDevEnvApiServer, storeDir=C:\\Users\\bbb01\\.docker\\devenvironments)"
+-------------------------------------------------------------------------------->8
+[2025-02-20T14:01:53.314078000Z] time="2025-02-20T23:01:53+09:00" level=info msg="DOCKER_HOST=npipe:////./pipe/docker_engine"
+[2025-02-20T14:01:53.314078000Z] time="2025-02-20T23:01:53+09:00" level=info msg="Starting server (socket=\\\\.\\pipe\\dockerDevEnvApiServer, storeDir=C:\\Users\\bbb01\\.docker\\devenvironments)"
+-------------------------------------------------------------------------------->8
+[2025-02-20T14:18:59.024274200Z] time="2025-02-20T23:18:58+09:00" level=info msg="DOCKER_HOST=npipe:////./pipe/docker_engine"
+[2025-02-20T14:18:59.024815400Z] time="2025-02-20T23:18:59+09:00" level=info msg="Starting server (socket=\\\\.\\pipe\\dockerDevEnvApiServer, storeDir=C:\\Users\\bbb01\\.docker\\devenvironments)"

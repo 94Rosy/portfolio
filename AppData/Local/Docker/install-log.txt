@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------->8
+Version: 4.38.0 (181591)
+Sha1: 
+Started on: 2025-02-20 12:49:51.306
+Resources: C:\Users\bbb01\Downloads\resources
+OS: Windows 10 Home
+Edition: Core
+Id: 2009
+Build: 26100
+BuildLabName: 26100.1.amd64fre.ge_release.240331-1435
+File: C:\Users\bbb01\AppData\Local\Docker\install-log.txt
+CommandLine: "C:\Users\bbb01\Downloads\Docker Desktop Installer.exe" 
+You can send feedback, including this log file, at https://github.com/docker/for-win/issues
+[2025-02-20T12:49:51.652947700Z][ManifestAndExistingInstallationLoader][I] No install path specified, looking for default installation registry key
+[2025-02-20T12:49:52.675839300Z][Installer][I] Existing installation found: build=181591, version=4.38.0, basePath=C:\Program Files\Docker\Docker, channelUrl=https://desktop-stage.docker.com/win/main/amd64/appcast.xml
+[2025-02-20T12:49:52.684353800Z][ManifestAndExistingInstallationLoader][I] Not run as admin, relaunching with UAC prompt

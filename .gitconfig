@@ -1,0 +1,12 @@
+[core]
+	editor = \"C:/Users/bbb01/AppData/Local/Programs/Microsoft VS Code/bin/code\" --wait
+	autocrlf = false
+[user]
+	name = rosy94
+	email = mya315748@gmail.com
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
