@@ -1,4 +1,3 @@
-// components/ResultList.tsx
 import { Skeleton } from "@/components/ui/skeleton";
 
 const mockResults = [

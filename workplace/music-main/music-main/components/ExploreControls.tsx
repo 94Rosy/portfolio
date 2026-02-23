@@ -1,4 +1,3 @@
-// components/ExploreControls.tsx
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export type Filters = {
