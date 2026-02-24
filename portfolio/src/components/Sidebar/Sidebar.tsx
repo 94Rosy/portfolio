@@ -34,13 +34,16 @@ export default function Sidebar() {
 
       <div className={styles.links}>
         <a
-          className={styles.btnGhost}
+          className={`${styles.btn} ${styles.github}`}
           href={profile.links.github}
           target="_blank"
         >
           GitHub
         </a>
-        <a className={styles.btnGhost} href={profile.links.email}>
+        <a
+          className={`${styles.btn} ${styles.email}`}
+          href={profile.links.email}
+        >
           Email
         </a>
       </div>

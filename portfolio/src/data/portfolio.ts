@@ -325,7 +325,7 @@ export const portfolio = {
     name: "박소영",
     title: "Frontend Developer",
     tagline:
-      "기능을 넘어, 더 나은 경험을 함께 설계하는 프론트엔드 개발자입니다.",
+      "기능을 넘어, 더 나은 경험을 함께 설계하는 \n 프론트엔드 개발자입니다.",
     links: {
       github: "https://github.com/94Rosy",
       email: "mailto:bbb0120@nate.com",
