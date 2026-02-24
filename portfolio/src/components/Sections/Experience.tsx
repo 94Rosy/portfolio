@@ -71,8 +71,8 @@ export default function Experience() {
 
                   <motion.span
                     className={styles.chev}
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    style={{ rotate: 45 }}
+                    animate={{ rotate: isOpen ? 225 : 45 }}
                     aria-hidden
                   />
                 </div>

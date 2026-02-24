@@ -105,4 +105,48 @@ export const personalProjects: PersonalProject[] = [
     troubleshoots: [],
     links: { github: "https://github.com/94Rosy/music" },
   },
+
+  {
+    status: "completed",
+    slug: "portfolio-v2",
+    name: "Portfolio v2",
+    subtitle:
+      "App Router 기반 구조 설계와 상태 기반 UI 전략을 적용한 제품형 포트폴리오 웹 애플리케이션",
+    role: "Frontend Architecture & UI System Design",
+    stack: [
+      "Next.js (App Router)",
+      "TypeScript",
+      "SCSS Modules",
+      "Framer Motion",
+    ],
+    highlights: [
+      "App Router 기반 폴더 구조 설계 및 데이터/타입/표시 로직 분리",
+      "프로젝트 상태(completed / in-progress) 기반 조건부 렌더링 전략 설계",
+      "회사/개인 프로젝트 데이터 구조를 타입 기반으로 분리하여 확장성 확보",
+      "Framer Motion을 활용한 아코디언 인터랙션 및 자연스러운 트랜지션 구현",
+      "디자인 토큰(컬러/보더/라디우스) 기반 일관된 UI 시스템 구성",
+      "툴팁, 뱃지, 상태 라벨 등 재사용 가능한 UI 패턴 정의",
+    ],
+    troubleshoots: [
+      {
+        title: "프로젝트 상태 기반 UI 분기 설계",
+        problem:
+          "작업중 프로젝트와 완료 프로젝트의 표시 정보가 달라 중복 로직과 조건문이 복잡해질 가능성이 있었음",
+        solution:
+          "status 필드를 기준으로 planned/roadmap/highlights 표시를 조건부 분기하여 UI 구조를 명확히 분리",
+        result: "확장 가능한 프로젝트 스키마 구조 확보 및 유지보수성 향상",
+      },
+      {
+        title: "아코디언 확장 시 스크롤 위치 문제",
+        problem:
+          "회사 카드 확장 시 화면 위치가 자연스럽지 않고 사용자 맥락이 깨지는 문제 발생",
+        solution:
+          "requestAnimationFrame과 DOM ref를 활용해 확장 시 해당 카드 위치로 부드럽게 스크롤 이동 구현",
+        result: "사용자 시선 흐름 유지 및 인터랙션 완성도 향상",
+      },
+    ],
+    links: {
+      github: "https://github.com/94Rosy/portfolio",
+    },
+  },
 ];
