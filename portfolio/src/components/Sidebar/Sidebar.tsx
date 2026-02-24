@@ -8,6 +8,9 @@ export default function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
+      <div className={styles.theme}>
+        <ThemeToggle />
+      </div>
       <div className={styles.profile}>
         <div className={styles.profileTop}>
           <div className={styles.avatar} />
@@ -15,10 +18,6 @@ export default function Sidebar() {
           <div className={styles.profileText}>
             <h2>{profile.name}</h2>
             <p className={styles.title}>{profile.title}</p>
-          </div>
-
-          <div className={styles.theme}>
-            <ThemeToggle />
           </div>
         </div>
 
@@ -40,8 +39,8 @@ export default function Sidebar() {
 
       <div className={styles.block}>
         <h3>학력</h3>
-        <p>{education.school}</p>
-        <p className={styles.muted}>{education.note}</p>
+        <p>{education.school1}</p>
+        <p className={styles.muted}>{education.school2}</p>
       </div>
 
       <div className={styles.block}>

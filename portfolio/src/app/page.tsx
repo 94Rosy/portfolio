@@ -11,7 +11,7 @@ export default function Page() {
       <div className={styles.container}>
         <header className={styles.hero}>
           <h1>포트폴리오</h1>
-          <p>정체되지 않고 나아가는 프론트엔드 개발자의 기록</p>
+          <p>정체되지 않고 나아가고 싶은 개발자의 포트폴리오</p>
         </header>
 
         <div className={styles.grid}>

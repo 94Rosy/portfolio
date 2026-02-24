@@ -47,7 +47,6 @@ export type SkillGroup = {
   items: string[];
 };
 
-// ✅ 핵심: 여기서 타입을 명시해 유니온 추론을 막는다.
 export const experience: CompanyExperience[] = [
   {
     id: "dfy",
@@ -296,41 +295,56 @@ export const personalProjects: PersonalProject[] = [
 ];
 
 export const skills: SkillGroup[] = [
-  { title: "Core", items: ["React", "Next.js", "TypeScript", "Redux Toolkit"] },
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "Redux Toolkit"],
+  },
   {
     title: "UI & Styling",
-    items: ["SCSS", "CSS Modules", "Tailwind CSS", "Mantine", "Storybook"],
+    items: ["HTML5", "CSS3", "SCSS", "CSS Modules", "Tailwind CSS"],
   },
   {
-    title: "Tools & Testing",
-    items: ["Git", "Vercel", "Supabase", "Vitest", "Playwright"],
+    title: "Data & API",
+    items: ["Supabase", "REST API", "Swagger"],
+  },
+  {
+    title: "Testing & Documentation",
+    items: ["Storybook", "Vitest (Learning)"],
+  },
+  {
+    title: "Collaboration & Tools",
+    items: ["Figma", "Zeplin", "Jira", "Slack", "GitLab", "GitHub"],
+  },
+  {
+    title: "Deployment",
+    items: ["Vercel", "AWS EC2"],
   },
 ];
-
 export const portfolio = {
   profile: {
     name: "박소영",
     title: "Frontend Developer",
-    tagline: "React/Next.js 기반 UI·UX 개선과 공통 컴포넌트 설계를 좋아합니다.",
+    tagline:
+      "기능을 넘어, 더 나은 경험을 함께 설계하는 프론트엔드 개발자입니다.",
     links: {
-      github: "https://github.com/여기에-깃허브",
-      email: "mailto:여기에-이메일",
+      github: "https://github.com/94Rosy",
+      email: "mailto:bbb0120@nate.com",
     },
   },
   education: {
-    school: "학교명",
-    note: "전공/기간 등 한 줄",
+    school1: "현대고등학교",
+    school2: "삼육대학교 컴퓨터학부 소프트웨어 전공",
   },
   about: [
-    "React/TypeScript 기반 Web Application 개발 경험",
-    "이커머스 UI/UX 리뉴얼 및 반응형 최적화 경험",
-    "공통 컴포넌트 설계(Actionbar/Chips/Pagination) 및 재사용 구조화",
-    "PL 경험(대외 커뮤니케이션/일정 관리/요구사항 조율)",
+    "제품이 성장할 수 있는 방향을 함께 고민하는 개발자입니다.",
+    "‘이렇게 바꾸면 더 좋아지지 않을까요?’라는 질문을 자연스럽게 던집니다.",
+    "기획과 디자인의 맥락을 이해하며 프론트엔드 구조를 설계합니다.",
+    "팀과 소통하며 기능이 아닌 가치를 만드는 과정을 즐깁니다.",
   ],
   growth: [
-    "Next.js(App Router) 프로젝트로 포트폴리오 고도화 중",
-    "테스트(Vitest/Playwright)와 Storybook 기반 문서화 학습/적용 중",
-    "접근성/성능/UX 개선을 계속 반복하며 개선하는 스타일",
+    "Next.js 기반으로 포트폴리오를 고도화하며 구조와 설계를 점검하고 있습니다.",
+    "테스트와 Storybook을 학습하며 설명 가능한 코드를 지향합니다.",
+    "접근성, 성능, UX를 반복적으로 개선하며 완성도를 높이고 있습니다.",
   ],
 
   experience,

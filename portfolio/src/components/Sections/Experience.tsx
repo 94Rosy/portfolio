@@ -38,7 +38,7 @@ export default function Experience() {
     <section className={styles.section} id="experience">
       <header className={styles.header}>
         <h2>Professional Experience</h2>
-        <p>회사별로 수행 프로젝트를 정리했습니다.</p>
+        <p>회사별 수행 프로젝트를 소개합니다.</p>
       </header>
 
       <div className={styles.list}>
@@ -71,7 +71,7 @@ export default function Experience() {
                       프로젝트 {c.projects.length}개
                     </span>
                     {c.projects.some((p) => p.roleTag === "PL") && (
-                      <span className={styles.badgePrimary}>PL 경험</span>
+                      <span className={styles.badgePrimary}>PL</span>
                     )}
                   </div>
 

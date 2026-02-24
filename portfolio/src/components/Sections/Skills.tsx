@@ -6,7 +6,7 @@ export default function Skills() {
     <section className={styles.section} id="skills">
       <header className={styles.header}>
         <h2>Skills</h2>
-        <p>실무에서 사용한 스택 중심으로 정리했습니다.</p>
+        <p>프로젝트를 통해 다뤄온 기술과, 확장해가고 있는 스택입니다.</p>
       </header>
 
       <div className={styles.groups}>

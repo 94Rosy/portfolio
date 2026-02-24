@@ -6,10 +6,17 @@
   padding: 24px;
   display: grid;
   gap: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .profile {
   text-align: center;
+}
+
+.theme {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .avatar {
@@ -53,7 +60,8 @@
 }
 .btnGhost {
   border: 1px solid var(--line);
-  background: var(--card);
+  background: #fff;
+  display: block;
 }
 .btnPrimary:hover,
 .btnGhost:hover {
@@ -75,23 +83,15 @@
   color: var(--text);
   line-height: 1.5;
 }
+
+.block li,
+.block p,
+.tagline {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .muted {
   color: var(--muted);
   margin: 0;
-}
-
-.profileTop {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.profileText {
-  flex: 1;
-}
-
-.theme {
-  display: flex;
-  align-items: center;
 }
