@@ -73,3 +73,29 @@
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.06);
 }
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.status {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.completed {
+  background: var(--primary);
+}
+
+.in-progress {
+  background: var(--secondary);
+}
+
+.planned {
+  background: var(--accent);
+}

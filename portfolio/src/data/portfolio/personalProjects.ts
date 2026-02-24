@@ -2,11 +2,12 @@ import type { PersonalProject } from "./types";
 
 export const personalProjects: PersonalProject[] = [
   {
+    status: "completed",
     slug: "emotionlog",
     name: "EmotionLog",
     subtitle:
       "감정을 기록하고, 시각화하고, 스스로를 이해하기 위한 감정 일기 웹 플랫폼",
-    role: "Solo Frontend (기획~배포 전체 과정)Frontend",
+    role: "Solo Frontend (기획~배포 전체 과정)",
     stack: [
       "React",
       "TypeScript",
@@ -46,7 +47,7 @@ export const personalProjects: PersonalProject[] = [
           "가이드용 계정으로 전체 흐름을 안전하게 체험 가능, 데이터 손상 위험 제거",
       },
       {
-        title: "테마 전환 깜빡임(FOUC) 개선",
+        title: "테마 전환 깜빡임 개선",
         problem:
           "새로고침/초기 진입 시 데이터 로딩 타이밍과 테마 적용 타이밍이 엇갈려 화면이 순간적으로 어색하게 바뀜",
         solution:
@@ -64,15 +65,17 @@ export const personalProjects: PersonalProject[] = [
     ],
     links: {
       github: "https://github.com/94Rosy/myDiary2025",
-      // demo: {
-      //   id: "test@emolog.com",
-      //   password: "qwe123qwe123!",
-      //   note: "테스트 계정은 탈퇴할 수 없습니다.",
-      // },
+      demo: {
+        id: "test@emolog.com",
+        password: "qwe123qwe123!",
+        note: "테스트 계정은 탈퇴할 수 없습니다.",
+      },
       live: "https://my-diary2025-8afm.vercel.app",
     },
   },
+
   {
+    status: "in-progress",
     slug: "musiclens",
     name: "MusicLens",
     subtitle:

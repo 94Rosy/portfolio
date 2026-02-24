@@ -59,7 +59,14 @@ export default function PersonalProjects() {
                 className={styles.card}
               >
                 <div className={styles.top}>
-                  <h3>{p.name}</h3>
+                  <div className={styles.titleRow}>
+                    <h3>{p.name}</h3>
+                    <span className={`${styles.status} ${styles[p.status]}`}>
+                      {p.status === "completed" && "배포 완료"}
+                      {p.status === "in-progress" && "작업중"}
+                      {p.status === "planned" && "기획중"}
+                    </span>
+                  </div>
                   <p className={styles.subtitle}>{p.subtitle}</p>
                 </div>
 

@@ -43,6 +43,8 @@ export type ProjectLinks = {
   };
 };
 
+export type ProjectStatus = "completed" | "in-progress" | "planned";
+
 export type PersonalProject = {
   slug: string;
   name: string;
@@ -54,6 +56,7 @@ export type PersonalProject = {
   roadmap?: string[];
   troubleshoots: Troubleshoot[];
   links: ProjectLinks;
+  status: ProjectStatus;
 };
 
 export type SkillGroup = {

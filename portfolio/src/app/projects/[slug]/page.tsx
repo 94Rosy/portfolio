@@ -36,23 +36,27 @@ export default async function ProjectDetail({ params }: Props) {
               </a>
             )}
 
+            {project.links.demo && (
+              <div className={styles.tooltipWrapper}>
+                <button className={styles.demoButton}>Demo 계정</button>
+
+                <div className={styles.tooltip}>
+                  <div>
+                    <strong>ID</strong> {project.links.demo.id}
+                  </div>
+                  <div>
+                    <strong>PW</strong> {project.links.demo.password}
+                  </div>
+                  {project.links.demo.note && <p>{project.links.demo.note}</p>}
+                </div>
+              </div>
+            )}
+
             {project.links.github && (
               <a href={project.links.github} target="_blank" rel="noreferrer">
                 GitHub
               </a>
             )}
-
-            {project.links.demo && (
-              <div>
-                <div>테스트 ID: {project.links.demo.id}</div>
-                <div>PW: {project.links.demo.password}</div>
-                {project.links.demo.note && <p>{project.links.demo.note}</p>}
-              </div>
-            )}
-
-            {project.links.demo ? (
-              <button type="button">Demo 계정 보기</button>
-            ) : null}
           </div>
         </header>
 
@@ -85,22 +89,60 @@ export default async function ProjectDetail({ params }: Props) {
           </section>
         ) : null}
 
-        {project.troubleshoots.map((trouble) => (
-          <li key={`${project.slug}-${trouble.title}`}>
-            <h4>{trouble.title}</h4>
-            <p>
-              <strong>Problem</strong> {trouble.problem}
-            </p>
-            <p>
-              <strong>Solution</strong> {trouble.solution}
-            </p>
-            {trouble.result && (
-              <p>
-                <strong>Result</strong> {trouble.result}
-              </p>
-            )}
-          </li>
-        ))}
+        {project.status === "in-progress" && project.planned?.length ? (
+          <section className={styles.section}>
+            <h2>Planned</h2>
+            <ul>
+              {project.planned.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {project.status === "in-progress" && project.roadmap?.length ? (
+          <section className={styles.section}>
+            <h2>Roadmap</h2>
+            <ul>
+              {project.roadmap.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {project.troubleshoots.length ? (
+          <section className={styles.section}>
+            <h2>Troubleshoots</h2>
+            <ul className={styles.troubleshoots}>
+              {project.troubleshoots.map((t) => (
+                <li
+                  key={`${project.slug}-${t.title}`}
+                  className={styles.troubleItem}
+                >
+                  <h4 className={styles.troubleTitle}>{t.title}</h4>
+
+                  <p>
+                    <span className={styles.problemLabel}>Problem</span>
+                    {t.problem}
+                  </p>
+
+                  <p>
+                    <span className={styles.solutionLabel}>Solution</span>
+                    {t.solution}
+                  </p>
+
+                  {t.result && (
+                    <p>
+                      <span className={styles.resultLabel}>Result</span>
+                      {t.result}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
       </div>
     </main>
   );
