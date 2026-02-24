@@ -3,11 +3,11 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Experience.module.scss";
-import { portfolio } from "@/data/portfolio";
+import { experience } from "@/data/portfolio/experience";
 
 export default function Experience() {
   const [openId, setOpenId] = useState<string | null>(
-    portfolio.experience[0]?.id ?? null,
+    experience[0]?.id ?? null,
   );
 
   // 카드 DOM ref 저장용
@@ -42,7 +42,7 @@ export default function Experience() {
       </header>
 
       <div className={styles.list}>
-        {portfolio.experience.map((c) => {
+        {experience.map((c) => {
           const isOpen = openId === c.id;
 
           return (

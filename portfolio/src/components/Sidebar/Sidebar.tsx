@@ -1,5 +1,5 @@
 "use client";
-import { portfolio } from "@/data/portfolio";
+import { portfolio } from "@/data/portfolio/index";
 import styles from "./Sidebar.module.scss";
 import ThemeToggle from "@/components/Utils/ThemeToggle";
 import Image from "next/image";

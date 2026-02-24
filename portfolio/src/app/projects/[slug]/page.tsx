@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { portfolio } from "@/data/portfolio";
+import { portfolio } from "@/data/portfolio/index";
 import styles from "./project.module.scss";
 
 type Props = {
@@ -30,15 +30,28 @@ export default async function ProjectDetail({ params }: Props) {
           <p className={styles.subtitle}>{project.subtitle}</p>
 
           <div className={styles.links}>
-            {project.links.github ? (
+            {project.links.live && (
+              <a href={project.links.live} target="_blank" rel="noreferrer">
+                Live
+              </a>
+            )}
+
+            {project.links.github && (
               <a href={project.links.github} target="_blank" rel="noreferrer">
                 GitHub
               </a>
-            ) : null}
+            )}
+
+            {project.links.demo && (
+              <div>
+                <div>테스트 ID: {project.links.demo.id}</div>
+                <div>PW: {project.links.demo.password}</div>
+                {project.links.demo.note && <p>{project.links.demo.note}</p>}
+              </div>
+            )}
+
             {project.links.demo ? (
-              <a href={project.links.demo} target="_blank" rel="noreferrer">
-                Demo
-              </a>
+              <button type="button">Demo 계정 보기</button>
             ) : null}
           </div>
         </header>
@@ -72,16 +85,22 @@ export default async function ProjectDetail({ params }: Props) {
           </section>
         ) : null}
 
-        {project.troubleshoots.length ? (
-          <section className={styles.section}>
-            <h2>Troubleshooting</h2>
-            <ul>
-              {project.troubleshoots.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
+        {project.troubleshoots.map((trouble) => (
+          <li key={`${project.slug}-${trouble.title}`}>
+            <h4>{trouble.title}</h4>
+            <p>
+              <strong>Problem</strong> {trouble.problem}
+            </p>
+            <p>
+              <strong>Solution</strong> {trouble.solution}
+            </p>
+            {trouble.result && (
+              <p>
+                <strong>Result</strong> {trouble.result}
+              </p>
+            )}
+          </li>
+        ))}
       </div>
     </main>
   );

@@ -1,5 +1,5 @@
 import styles from "./Skills.module.scss";
-import { portfolio } from "@/data/portfolio";
+import { skills } from "@/data/portfolio/skills";
 
 export default function Skills() {
   return (
@@ -10,8 +10,8 @@ export default function Skills() {
       </header>
 
       <div className={styles.groups}>
-        {portfolio.skills.map((g) => (
-          <div key={g.title} className={styles.group}>
+        {skills.map((g) => (
+          <div key={g.title} className={styles.group} data-skill={g.title}>
             <h3>{g.title}</h3>
             <div className={styles.items}>
               {g.items.map((s) => (

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import styles from "./ProjectGrid.module.scss";
-import { portfolio } from "@/data/portfolio";
+import { personalProjects } from "@/data/portfolio/personalProjects";
 import { motion, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -47,7 +47,7 @@ export default function PersonalProjects() {
         whileInView={reduce ? undefined : "show"}
         viewport={{ once: true, amount: 0.2 }}
       >
-        {portfolio.personalProjects.map((p) => (
+        {personalProjects.map((p) => (
           <motion.div key={p.slug} variants={item}>
             <motion.div
               whileHover={reduce ? undefined : { y: -4 }}
