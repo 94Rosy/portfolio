@@ -196,11 +196,16 @@
   font-size: 13px;
 }
 
-.highlights {
-  margin: 10px 0 0;
+.projectHighlights {
+  margin: 12px 0 0;
   padding-left: 18px;
   display: grid;
-  gap: 6px;
+  gap: 8px;
+
+  li {
+    font-size: 13px;
+    line-height: 1.65;
+  }
 }
 
 .tech {
@@ -208,6 +213,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  font-size: 12px;
+}
+
+.techBadge {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  background: #fff;
+  color: var(--muted);
 }
 
 .badge {

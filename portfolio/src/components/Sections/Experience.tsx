@@ -9,27 +9,20 @@ export default function Experience() {
   const [openId, setOpenId] = useState<string | null>(
     experience[0]?.id ?? null,
   );
-
-  // 카드 DOM ref 저장용
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const openAndScroll = (id: string) => {
     setOpenId((prev) => {
       const next = prev === id ? null : id;
 
-      // 열릴 때만 스크롤
       if (next) {
         requestAnimationFrame(() => {
           const el = refs.current[next];
           if (!el) return;
-
-          // 상단 여백(헤더/패딩 느낌) 조금 주기
           const y = el.getBoundingClientRect().top + window.scrollY - 16;
-
           window.scrollTo({ top: y, behavior: "smooth" });
         });
       }
-
       return next;
     });
   };
@@ -54,6 +47,7 @@ export default function Experience() {
               }}
             >
               <button
+                type="button"
                 className={`${styles.summary} ${isOpen ? styles.open : ""}`}
                 onClick={() => openAndScroll(c.id)}
               >
@@ -79,6 +73,7 @@ export default function Experience() {
                     className={styles.chev}
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    aria-hidden
                   />
                 </div>
               </button>
@@ -111,6 +106,7 @@ export default function Experience() {
                           <article key={p.id} className={styles.projectCard}>
                             <div className={styles.projectHead}>
                               <h4 className={styles.projectTitle}>{p.title}</h4>
+
                               <div className={styles.projectMeta}>
                                 <span>{p.period}</span>
                                 {p.client && <span>· {p.client}</span>}
@@ -132,6 +128,27 @@ export default function Experience() {
                             </div>
 
                             <p className={styles.projectSummary}>{p.summary}</p>
+
+                            {p.highlights?.length ? (
+                              <ul className={styles.projectHighlights}>
+                                {p.highlights.map((h) => (
+                                  <li key={h}>{h}</li>
+                                ))}
+                              </ul>
+                            ) : null}
+
+                            {p.tech?.length ? (
+                              <div className={styles.tech}>
+                                {p.tech.map((t) => (
+                                  <span
+                                    key={`${p.id}-${t}`}
+                                    className={styles.techBadge}
+                                  >
+                                    {t}
+                                  </span>
+                                ))}
+                              </div>
+                            ) : null}
                           </article>
                         ))}
                       </div>
