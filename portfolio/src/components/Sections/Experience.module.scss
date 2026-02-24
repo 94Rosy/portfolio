@@ -49,8 +49,15 @@
 }
 
 .summary:hover {
-  background: rgba(0, 0, 0, 0.03);
-  transform: translateY(-1px);
+  background: rgba(167, 199, 231, 0.22);
+}
+
+.open {
+  background: radial-gradient(
+    circle at 20% 0%,
+    rgba(167, 199, 231, 0.18),
+    transparent 60%
+  );
 }
 
 .left {
@@ -66,7 +73,7 @@
 
 .companyMeta {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -88,16 +95,19 @@
   font-size: 11px;
   padding: 4px 8px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.06);
-  color: rgba(0, 0, 0, 0.75);
+  background: var(--primary-soft);
+  color: var(--text);
+  border: 1px solid var(--divider);
 }
 
 .badgePrimary {
   font-size: 11px;
   padding: 4px 8px;
   border-radius: 999px;
-  background: #111;
-  color: #fff;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-weight: 800;
+  font-weight: 800;
 }
 
 .chev {
@@ -109,7 +119,7 @@
 }
 
 .content {
-  padding: 28px;
+  padding: 14px 28px 28px 28px;
 }
 
 .overview {
@@ -117,6 +127,14 @@
   padding-left: 18px;
   display: grid;
   gap: 6px;
+
+  color: rgba(31, 41, 55, 0.9);
+}
+
+.overview li {
+  position: relative;
+  padding-left: 4px;
+  font-size: 13px;
 }
 
 .projects {
@@ -126,10 +144,10 @@
 }
 
 .projectCard {
-  border: 1px solid var(--line);
+  border: 1px solid var(--divider);
   border-radius: 14px;
   padding: 14px;
-  background: rgba(0, 0, 0, 0.015);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .projectHead {
@@ -140,6 +158,8 @@
 .projectTitle {
   margin: 0;
   font-size: 15px;
+  color: var(--text);
+  font-weight: 800;
 }
 
 .projectMeta {
@@ -157,9 +177,23 @@
   color: inherit;
 }
 
+.tagRole {
+  background: var(--accent-soft);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tagPercent {
+  background: var(--primary-soft);
+  color: var(--text);
+  font-weight: 700;
+}
+
 .projectSummary {
   margin: 10px 0 0;
   opacity: 0.9;
+  color: var(--text-soft);
+  font-size: 13px;
 }
 
 .highlights {
@@ -183,7 +217,7 @@
   background: rgba(0, 0, 0, 0.06);
 }
 
-/* 다크 대응(배지/hover 톤만 살짝) */
+/* 다크 모드 */
 [data-theme="dark"] {
   .summary:hover {
     background: rgba(255, 255, 255, 0.04);
@@ -203,5 +237,10 @@
 
   .projectCard {
     background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(31, 41, 55, 0.9);
+  }
+
+  .overview {
+    color: rgba(241, 245, 249, 0.88);
   }
 }

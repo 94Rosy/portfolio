@@ -20,11 +20,16 @@
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 999px;
-  margin: 0 auto 12px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 6px solid #ffffff;
+  box-shadow:
+    0 0 0 4px var(--primary-soft),
+    0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .title {
@@ -60,7 +65,7 @@
 }
 .btnGhost {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--card);
   display: block;
 }
 .btnPrimary:hover,
@@ -94,4 +99,19 @@
 .muted {
   color: var(--muted);
   margin: 0;
+}
+
+/* 다크 대응 */
+[data-theme="dark"] {
+  .btnGhost {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(31, 41, 55, 0.9);
+  }
+
+  .avatar {
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow:
+      0 15px 30px rgba(0, 0, 0, 0.5),
+      0 5px 10px rgba(0, 0, 0, 0.4);
+  }
 }

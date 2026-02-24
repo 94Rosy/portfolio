@@ -54,7 +54,7 @@ export default function Experience() {
               }}
             >
               <button
-                className={styles.summary}
+                className={`${styles.summary} ${isOpen ? styles.open : ""}`}
                 onClick={() => openAndScroll(c.id)}
               >
                 <div className={styles.left}>
@@ -115,12 +115,16 @@ export default function Experience() {
                                 <span>{p.period}</span>
                                 {p.client && <span>· {p.client}</span>}
                                 {p.roleTag && (
-                                  <span className={styles.tag}>
+                                  <span
+                                    className={`${styles.tag} ${styles.tagRole}`}
+                                  >
                                     {p.roleTag}
                                   </span>
                                 )}
                                 {p.contribution && (
-                                  <span className={styles.tag}>
+                                  <span
+                                    className={`${styles.tag} ${styles.tagPercent}`}
+                                  >
                                     기여 {p.contribution}
                                   </span>
                                 )}

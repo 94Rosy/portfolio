@@ -2,6 +2,7 @@
 import { portfolio } from "@/data/portfolio";
 import styles from "./Sidebar.module.scss";
 import ThemeToggle from "@/components/Utils/ThemeToggle";
+import Image from "next/image";
 
 export default function Sidebar() {
   const { profile, education, about, growth } = portfolio;
@@ -13,7 +14,14 @@ export default function Sidebar() {
       </div>
       <div className={styles.profile}>
         <div className={styles.profileTop}>
-          <div className={styles.avatar} />
+          <div className={styles.avatar}>
+            <Image
+              src="/me.png"
+              alt="박소영 프로필 사진"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
 
           <div className={styles.profileText}>
             <h2>{profile.name}</h2>
