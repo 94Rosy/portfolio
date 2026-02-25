@@ -1,6 +1,0 @@
--------------------------------------------------------------------------------->8
-[2025-02-20T12:46:04.499376600Z][Docker Desktop.exe.ipc] 38147f50-url-handler -> \\.\pipe\dockerBackendApiServer BackendAPI
-[2025-02-20T12:46:04.505548500Z][Docker Desktop.exe.url-handler] received request to handle url: docker-desktop://auth0/complete-login?code=REDACTED&state=REDACTED
-[2025-02-20T12:46:04.505548500Z][Docker Desktop.exe.ipc] (37e98501-0) 38147f50-url-handler C->S BackendAPI POST /registry/complete-login
-[2025-02-20T12:46:06.501291500Z][Docker Desktop.exe.ipc] (37e98501-0) 38147f50-url-handler C<-S 10d911f2-BackendAPI POST /registry/complete-login (1.995743s)
-[2025-02-20T12:46:06.501291500Z][Docker Desktop.exe.url-handler] auth0 url processed

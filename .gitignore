@@ -53,6 +53,8 @@ Recent/
 SendTo/
 Templates/
 시작 메뉴/
+workplace/
+.docker/
 
 # Editors
 .vscode/
