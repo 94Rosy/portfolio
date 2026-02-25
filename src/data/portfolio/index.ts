@@ -15,8 +15,8 @@ export const portfolio: PortfolioData = {
     },
   },
   education: {
-    school1: "현대고등학교",
-    school2: "삼육대학교 컴퓨터학부 소프트웨어 전공",
+    school1: "삼육대학교 컴퓨터학부 소프트웨어 전공",
+    school2: "현대고등학교",
   },
   about: [
     "제품이 성장할 수 있는 방향을 함께 고민하는 개발자입니다.",
