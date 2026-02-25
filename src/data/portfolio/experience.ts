@@ -3,7 +3,7 @@ import { CompanyExperience } from "./types";
 export const experience: CompanyExperience[] = [
   {
     id: "dfy",
-    company: "㈜DFY(DFZ)",
+    company: "㈜DFZ",
     team: "개발팀",
     title: "선임 / Frontend Developer",
     period: "2025.06 - 2026.02",
