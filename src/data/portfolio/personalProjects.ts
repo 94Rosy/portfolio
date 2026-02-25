@@ -120,12 +120,14 @@ export const personalProjects: PersonalProject[] = [
       "Framer Motion",
     ],
     highlights: [
-      "App Router 기반 폴더 구조 설계 및 데이터/타입/표시 로직 분리",
-      "프로젝트 상태(completed / in-progress) 기반 조건부 렌더링 전략 설계",
-      "회사/개인 프로젝트 데이터 구조를 타입 기반으로 분리하여 확장성 확보",
-      "Framer Motion을 활용한 아코디언 인터랙션 및 자연스러운 트랜지션 구현",
-      "디자인 토큰(컬러/보더/라디우스) 기반 일관된 UI 시스템 구성",
-      "툴팁, 뱃지, 상태 라벨 등 재사용 가능한 UI 패턴 정의",
+      "App Router 기반 구조 설계 및 타입 중심 데이터 모듈화",
+      "반응형 레이아웃 설계 및 구현",
+      "OS 테마 감지와 사용자 토글 기능을 포함한 다크 모드 구현 및 localStorage 영속화",
+      "프로젝트 상태(completed / in-progress / planned) 기반 조건부 렌더링 전략 설계",
+      "회사/개인 프로젝트 데이터를 분리하여 확장 가능한 구조 설계",
+      "Framer Motion을 활용한 아코디언 인터랙션 및 트랜지션 구현",
+      "디자인 값 통일 및 재사용 가능한 스타일 체계 구성",
+      "툴팁/뱃지/상태 라벨 등 재사용 가능한 UI 패턴 설계",
     ],
     troubleshoots: [
       {
