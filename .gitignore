@@ -55,11 +55,15 @@ Templates/
 시작 메뉴/
 workplace/
 .docker/
+portfolio/
 
 # Editors
 .vscode/
+.vscode/extensions/
+.vscode/.obsolete
 .idea/
 
 # Node / Next
-node_modules/
 .next/
+node_modules/
+EOF
