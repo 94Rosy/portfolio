@@ -170,8 +170,8 @@
 
 .troubleItem p {
   display: flex;
-  align-items: flex-start;
   align-items: baseline;
+  white-space: pre-line;
 }
 
 .troubleTitle {

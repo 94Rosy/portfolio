@@ -67,7 +67,7 @@ export const personalProjects: PersonalProject[] = [
         problem:
           "Supabase 프로젝트 만료로 인해 데이터베이스가 초기화되면서 서비스 데이터가 모두 사라지는 문제가 발생",
         solution:
-          "1) PostgreSQL 백업 파일을 활용하여 pg_restore/psql을 통해 데이터베이스를 복구한 후, Supabase 환경 변수와 인증 Redirect URL 설정을 재구성하여 애플리케이션 연결을 정상화했음.",
+          "1) PostgreSQL 백업 파일을 활용하여 pg_restore/psql을 통해 데이터베이스를 복구함\n2)Supabase 환경 변수와 인증 Redirect URL 설정을 재구성하여 애플리케이션 연결을 정상화했음.",
         result:
           "서비스 데이터를 성공적으로 복구하고, 로컬 및 Vercel 배포 환경에서 모두 정상적으로 동작하도록 시스템을 안정화함",
       },
