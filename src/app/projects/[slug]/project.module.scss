@@ -163,14 +163,15 @@
     margin: 0 0 12px;
   }
 
-  p {
-    margin: 0;
-    line-height: 1.7;
-  }
-
   p + p {
     margin-top: 10px;
   }
+}
+
+.troubleItem p {
+  display: flex;
+  align-items: flex-start;
+  align-items: baseline;
 }
 
 .troubleTitle {
@@ -187,6 +188,11 @@
   padding: 4px 8px;
   border-radius: 999px;
   margin-right: 8px;
+  flex-shrink: 0;
+
+  flex-shrink: 0;
+  min-width: 70px;
+  text-align: center;
 }
 
 .problemLabel {
